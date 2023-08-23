@@ -1,0 +1,48 @@
+<h1 style="text-align: center;">{{ title }}</h1>
+<br>
+<h2>Menu</h2>
+
+<table *ngFor="let c of getUniqueCategory()">
+  <th>{{c}}</th>
+  <tr *ngFor="let i of getByCategory(c)">
+   
+    <td>{{ i.item }}</td>
+    <td>{{ i.price | currency }}</td>
+
+  </tr>
+</table>
+
+  <!-- <h2>Sides</h2>
+<table>
+  <tr *ngFor="let i of getByCategory('sides')">
+   
+    <td>{{ i.item }}</td>
+    <td>{{ i.price | currency }}</td>
+
+  </tr>
+
+</table> -->
+<!-- 
+<h2>Salads</h2>
+<table>
+  <tr *ngFor="let i of getByCategory('salad')">
+   
+    <td>{{ i.item }}</td>
+    <td>{{ i.price | currency }}</td>
+
+  </tr>
+
+</table>
+
+<h2>Dessert</h2>
+<table>
+  <tr *ngFor="let i of getByCategory('dessert')">
+   
+    <td>{{ i.item }}</td>
+    <td>{{ i.price | currency }}</td>
+
+  </tr>
+
+</table> -->
+
+<!-- <h2 *ngFor="let i of getByCategory('dinner')">{{ i.item }}</h2> -->
